@@ -30,7 +30,11 @@ namespace GroupHeaderTemplateDemo
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            // Do not pass a new instance here
             itemListView.ScrollTo(list[2][3], list[2], ScrollToPosition.Start, true);
+            // I also tried the api, it worked fine
+            // The trick is to find the correct item
+            //itemListView.ScrollTo(list[2][3], ScrollToPosition.Start, true);
         }
     }
 }
